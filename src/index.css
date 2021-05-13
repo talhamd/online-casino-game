@@ -1,0 +1,21 @@
+/* .header{
+  background: -o-linear-gradient();
+  color: aquamarine;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  size: 10px;
+}
+
+body{
+  background: rgb(194, 32, 32) linear-gradient();
+}
+
+.footer{
+  background: linen;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; */
+
+
+@import "~bootstrap/dist/css/bootstrap";
+
+body{
+  padding-top: rem;
+}

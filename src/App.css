@@ -1,0 +1,36 @@
+.header{
+  color: wheat;
+  background: purple;
+}
+.btnprimary{
+  color:blueviolet;
+  margin-left: auto;
+}
+
+.tbody{
+  margin-top: 5rem;
+}
+
+.gamebox{
+  background-color: lightgrey;
+  width: 600px;
+  padding: 50px;
+  /* margin: 50px 50px 50px 50px; */
+  margin-left:155px;
+  margin-right: 100px;
+}
+
+.actions {
+  opacity: 0;
+}
+
+button:click .actions {
+  opacity: 1;
+}
+
+.game-button{
+  margin-top: 50px;
+}
+.counter{
+  background: rgb(194, 213, 247);
+}
