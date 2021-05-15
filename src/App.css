@@ -34,3 +34,12 @@ button:click .actions {
 .counter{
   background: rgb(194, 213, 247);
 }
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #800080fc;
+  color: white;
+  text-align: center;
+}

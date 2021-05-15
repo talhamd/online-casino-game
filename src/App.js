@@ -25,6 +25,7 @@ function App() {
    const updateBlance =(val) =>{
        setBalance(val);
    }
+
   return (
     <div className="App">
     <Header balance={balance}/>

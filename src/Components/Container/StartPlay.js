@@ -1,13 +1,13 @@
 
 import React, { useState, useEffect} from 'react';
 
-function StartPLay({gameClosed,updateBlance}) {
+function StartPLay({gameClosed,updateBlance, saveGameResults}) {
 
     const [num1, setNum1] = useState(0);
     const [num2, setNum2] = useState(0);
     const [num3, setNum3] = useState(0);
     const [isPlay, setIsPlay] = useState(false)
-    const [gameResults, setGameResults] = useState({})
+    // const [gameResults, setGameResults] = useState({})
 
     useEffect(()=>{
         if(localStorage.getItem('balance') > 0){
@@ -15,7 +15,7 @@ function StartPLay({gameClosed,updateBlance}) {
         }
     })
 
-    const updateState =async () =>{
+    const updateState = () =>{
         let rn1= Math.floor(Math. random() * 9) +1;
         let rn2= Math.floor(Math. random() * 9) +1;
         let rn3= Math.floor(Math. random() * 9) +1;
@@ -40,9 +40,7 @@ function StartPLay({gameClosed,updateBlance}) {
     const spin = async() => {
         
         let resp = await updateState();
-        console.log("balance",localStorage.getItem('balance'))
         const {rn1,rn2, rn3} = resp;
-        console.log(rn1,"=",rn2,"=",rn3)
         let earnDoller = 0;
 
         if((rn1 != rn2) && (rn1 != rn3) && (rn2 !=rn3)){
@@ -61,13 +59,13 @@ function StartPLay({gameClosed,updateBlance}) {
         
         localStorage.setItem('balance',balance)
         updateBlance(localStorage.getItem('balance'));
-        let gameRs = {
+        var d = new Date();
+        let data = {
             id: Math.floor(Math. random() * 99),
             sloats: rn1+"-"+rn2+"-"+rn3,
-            time:Date()
+            time:d.toLocaleString()
         }
-        setGameResults(gameRs);
-        console.log("gameResults",gameResults);
+        saveGameResults(data);
     }
   
     const reset = () => {
