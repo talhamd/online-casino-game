@@ -14,19 +14,9 @@ function Content({updateBlance}) {
   }
 
   const saveGameResults = (data) => {
-    try {
-     
-      if(Object.keys(data).length > 0){
-        setGameResults([...gameResults, {
-          id:1,
-          name:"guddu",
-          age:23
-        }])
-      }
-    } catch (error) {
-      console.log(error)
-    }
-    console.log("gameResults",gameResults)
+    let data1 = [...gameResults]
+    data1.push(data);
+    setGameResults(data1)
   }
   
   return (
@@ -40,15 +30,14 @@ function Content({updateBlance}) {
             </tr>
           </thead>
         <tbody>
-          {gameResults && gameResults.length > 0 && gameResults.map((data,i) =>{
-            let date = new Date(data.time)
-            date.toLocaleString()
+          {gameResults && gameResults.map((data,i) =>{
+            
             return(
               <React.Fragment>
                 <tr>
                   <td>{data.id}</td>
                   <td>{data.sloats}</td>
-                  <td>{date}</td>
+                  <td>{data.time}</td>
                 </tr>
               </React.Fragment>
             )

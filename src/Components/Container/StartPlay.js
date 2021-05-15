@@ -58,14 +58,15 @@ function StartPLay({gameClosed,updateBlance, saveGameResults}) {
         let balance = parseFloat(localStorage.getItem('balance')) + parseFloat(earnDoller);
         
         localStorage.setItem('balance',balance)
-        updateBlance(localStorage.getItem('balance'));
+        
         var d = new Date();
         let data = {
             id: Math.floor(Math. random() * 99),
             sloats: rn1+"-"+rn2+"-"+rn3,
             time:d.toLocaleString()
         }
-        saveGameResults(data);
+        await saveGameResults(data);
+        await updateBlance(localStorage.getItem('balance'));
     }
   
     const reset = () => {
