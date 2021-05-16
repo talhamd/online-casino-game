@@ -6,7 +6,7 @@ function Header({balance}) {
 
 
     const [show, setShow] = useState(false);
-    const [usename, setUsername] = useState('')
+    const [username, setUsername] = useState('')
     const [mobile, setMobile] = useState('')
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
@@ -40,15 +40,18 @@ function Header({balance}) {
             <nav className='header'>
                 
                 <div className="container">
-                    <src >Online Casino</src>
-                    <div style={{float: "right"}}>
-                        <span>Wallet&nbsp;</span><span><strong>${balance}</strong></span>&nbsp;&nbsp;&nbsp;
-                        
-                        <span  >{usename? usename:"Guest"}</span>&nbsp;
-                        <button  onClick={usename ? logOut:handleShow}>{usename ? "Logout":"Login"}</button>
-                        <Login show={show}/>
-                    </div>    
-                     
+                    <div className="col-xl-12">
+                        <div className="col-md-6" style={{float: "left"}}>
+                            <h2 className="company-name">Online Casino</h2>
+                        </div>
+                        <div className="col-md-6" style={{float:"right",textAlign: "right"}}>
+                            <span className="wallet">Wallet{" "} ${""}{balance}</span>
+                            {username ? <img width="35px" src="assets\image\no-image-icon-23479.png"></img>:<span className="user-name" >Guest</span>}
+                            <a href="#"><span className="login-logout" onClick={username ? logOut:handleShow}>{username ? "Logout":"Login"}</span></a>
+                            <Login show={show}/>
+                        </div>
+                    
+                    </div>
                 </div>
             </nav>
             <Login show={show} handleClose={handleClose} handleSubmit={handleSubmit}/> 

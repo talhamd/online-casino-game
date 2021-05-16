@@ -27,7 +27,7 @@ function Login({show,handleClose,handleSubmit}) {
                         <Form.Control type="text" placeholder="User Name" name="uname" value={name} onChange={(e)=>onChangeHandler(e)}/>
                     </Form.Group>
 
-                    <Form.Group controlId="formBasicEmail">
+                    <Form.Group controlId="formBasicNumber">
                         <Form.Label>Mobile Numer</Form.Label>
                         <Form.Control type="number" placeholder="Enter your mobile number" name="number" value={mobile}  onChange={(e)=>onChangeHandler(e)}/>
                     </Form.Group>

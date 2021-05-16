@@ -1,24 +1,25 @@
-.header{
+.header {
   color: wheat;
   background: purple;
+  height: 60px;
 }
-.btnprimary{
-  color:blueviolet;
+.btnprimary {
+  color: blueviolet;
   margin-left: auto;
 }
 
-.tbody{
+.tbody {
   margin-top: 5rem;
 }
 
-.gamebox{
+.gamebox {
   background-color: lightgrey;
   width: 600px;
   padding: 50px;
-  /* margin: 50px 50px 50px 50px; */
-  margin-left:155px;
+  margin: 50px 50px 50px 50px;
+  margin-left: 155px;
   margin-right: 100px;
-  margin-bottom:50px;
+  margin-bottom: 50px;
 }
 
 .actions {
@@ -29,10 +30,10 @@ button:click .actions {
   opacity: 1;
 }
 
-.game-button{
+.game-button {
   margin-top: 50px;
 }
-.counter{
+.counter {
   background: rgb(194, 213, 247);
 }
 .footer {
@@ -43,4 +44,28 @@ button:click .actions {
   background-color: #800080fc;
   color: white;
   text-align: center;
+}
+
+.wallet {
+  font-size: 22px;
+  color: white;
+  font-family: ui-sans-serif;
+  padding: 10px;
+}
+
+.user-name {
+  font-size: 22px;
+  font-family: ui-sans-serif;
+  padding: 10px;
+  color: white;
+}
+.login-logout {
+  color: white;
+  font-size: 22px;
+  font-family: ui-sans-serif;
+  padding: 10px;
+}
+.company-name {
+  color: white;
+  font-family: monospace;
 }
